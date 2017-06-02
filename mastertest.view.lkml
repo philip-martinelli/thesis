@@ -1,4 +1,4 @@
-view: wowtest {
+view: mastertest {
   sql_table_name: wow.wowtest ;;
 
   dimension: int64_field_0 {

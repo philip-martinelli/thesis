@@ -11,8 +11,14 @@ include: "*.dashboard"
 
 explore: avatars {}
 
+explore: chars {}
+
 explore: locations {}
 
-explore: wowtest {}
+explore: mastertest {}
 
 explore: zones {}
+
+explore: m1 {}
+
+explore: jan_activity {}
