@@ -18,7 +18,12 @@ view: chars {
 
   measure: count {
     type: count
-    approximate_threshold: 100000
     drill_fields: []
   }
+
+  filter: new_players {
+    type: yesno
+    sql: EXISTS (SELECT b._timestamp FROM wow.avatars b WHERE b.char = ${char} AND b._level = 1) ;;
+  }
+
 }

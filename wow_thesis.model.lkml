@@ -9,16 +9,18 @@ include: "*.dashboard"
 # NOTE: please see https://looker.com/docs/r/sql/bigquery?version=4.12
 # NOTE: for BigQuery specific considerations
 
-explore: avatars {}
+explore: daily_activity_test {}
 
 explore: chars {}
 
 explore: locations {}
 
-explore: mastertest {}
-
 explore: zones {}
 
-explore: m1 {}
+explore: hourly_activity {}
 
-explore: jan_activity {}
+explore: weekly_summary {}
+
+explore: weekly_summary_pdt {}
+
+explore: daily_activity_pdt {}
