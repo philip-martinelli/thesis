@@ -1,7 +1,7 @@
 view: daily_activity_pdt {
 
   derived_table: {
-    sql: select char, AVG(minutes) as minutes FROM wow.daily_activity_test
+    sql: select char, AVG(minutes) as minutes FROM wow.daily_activity_clean
 group by 1
  ;;
   }

@@ -1,4 +1,4 @@
-view: daily_activity_test {
+view: daily_activity_clean {
 
   dimension: char {
     type: string
@@ -13,12 +13,12 @@ view: daily_activity_test {
 
   dimension: week_day_ordered {
     type: number
-    sql: CASE WHEN daily_activity_test.day_of_week = 'Monday' THEN 1
-  WHEN daily_activity_test.day_of_week = 'Tuesday' THEN 2
-  WHEN daily_activity_test.day_of_week = 'Wednesday' THEN 3
-  WHEN daily_activity_test.day_of_week = 'Thursday' THEN 4
-  WHEN daily_activity_test.day_of_week = 'Friday' THEN 5
-  WHEN daily_activity_test.day_of_week = 'Saturday' THEN 6
+    sql: CASE WHEN daily_activity_clean.day_of_week = 'Monday' THEN 1
+  WHEN daily_activity_clean.day_of_week = 'Tuesday' THEN 2
+  WHEN daily_activity_clean.day_of_week = 'Wednesday' THEN 3
+  WHEN daily_activity_clean.day_of_week = 'Thursday' THEN 4
+  WHEN daily_activity_clean.day_of_week = 'Friday' THEN 5
+  WHEN daily_activity_clean.day_of_week = 'Saturday' THEN 6
   ELSE 7 END ;;
   }
 

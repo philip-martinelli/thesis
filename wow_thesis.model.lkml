@@ -9,9 +9,9 @@ include: "*.dashboard"
 # NOTE: please see https://looker.com/docs/r/sql/bigquery?version=4.12
 # NOTE: for BigQuery specific considerations
 
-explore: daily_activity_test {}
+explore: daily_activity_clean {}
 
-explore: chars {}
+explore: chars_clean {}
 
 explore: locations {}
 
@@ -19,7 +19,7 @@ explore: zones {}
 
 explore: hourly_activity {}
 
-explore: weekly_summary {}
+explore: weekly_summary_clean {}
 
 explore: weekly_summary_pdt {}
 

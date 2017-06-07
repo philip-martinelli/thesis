@@ -1,5 +1,5 @@
-view: weekly_summary {
-  sql_table_name: wow.weekly_summary ;;
+view: weekly_summary_clean {
+  sql_table_name: wow.weekly_summary_clean ;;
 
   dimension: char {
     type: number

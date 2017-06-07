@@ -1,5 +1,5 @@
-view: chars {
-  sql_table_name: wow.chars ;;
+view: chars_clean {
+  sql_table_name: wow.chars_clean ;;
 
   dimension: _charclass {
     type: string

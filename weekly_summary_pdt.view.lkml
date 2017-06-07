@@ -3,7 +3,7 @@ view: weekly_summary_pdt {
   derived_table: {
     sql:  SELECT char,AVG(days_active) as days_active ,AVG(minutes) as minutes,AVG(session)as session
 FROM
-  wow.weekly_summary
+  wow.weekly_summary_clean
  GROUP BY 1
  order by 1;;
   }
