@@ -1,4 +1,4 @@
-view: weekly_summary_pdt {
+view: weekly_summary_dist {
 
   derived_table: {
     sql:  SELECT char,AVG(days_active) as days_active ,AVG(minutes) as minutes,AVG(session)as session

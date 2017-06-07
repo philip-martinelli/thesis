@@ -21,6 +21,6 @@ explore: hourly_activity {}
 
 explore: weekly_summary_clean {}
 
-explore: weekly_summary_pdt {}
+explore: weekly_summary_dist {}
 
-explore: daily_activity_pdt {}
+explore: daily_activity_dist {}

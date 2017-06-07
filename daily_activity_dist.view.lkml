@@ -1,4 +1,4 @@
-view: daily_activity_pdt {
+view: daily_activity_dist {
 
   derived_table: {
     sql: select char, AVG(minutes) as minutes FROM wow.daily_activity_clean
