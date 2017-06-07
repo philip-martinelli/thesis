@@ -1,6 +1,17 @@
 view: chars_clean {
   sql_table_name: wow.chars_clean ;;
 
+  dimension: new_players {
+    type: string
+    sql: CASE WHEN EXISTS (SELECT * FROM wow.new_chars b WHERE b.char = ${char}) THEN 'New' else 'Existing' END;;
+  }
+
+  dimension: char {
+    type: number
+    sql: ${TABLE}.char ;;
+  }
+
+
   dimension: _charclass {
     type: string
     sql: ${TABLE}._charclass ;;
@@ -11,19 +22,12 @@ view: chars_clean {
     sql: ${TABLE}._race ;;
   }
 
-  dimension: char {
-    type: number
-    sql: ${TABLE}.char ;;
-  }
 
   measure: count {
+    label: "Count"
     type: count
     drill_fields: []
   }
 
-  filter: new_players {
-    type: yesno
-    sql: EXISTS (SELECT b._timestamp FROM wow.avatars b WHERE b.char = ${char} AND b._level = 1) ;;
-  }
 
 }
