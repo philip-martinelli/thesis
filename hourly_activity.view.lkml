@@ -1,5 +1,5 @@
-view: hourly_activity {
-  sql_table_name: wow.hourly_activity ;;
+view: hourly_activity_clean {
+  sql_table_name: wow.hourly_activity_clean ;;
 
   dimension: char {
     type: number
@@ -13,11 +13,7 @@ view: hourly_activity {
 
   dimension_group: hour {
     type: time
-    timeframes: [
-      time_of_day,
-      hour_of_day,
-      day_of_week
-    ]
+    timeframes: [time_of_day,hour_of_day,day_of_week]
     sql: ${TABLE}.hour ;;
   }
 

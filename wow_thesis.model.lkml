@@ -11,13 +11,20 @@ include: "*.dashboard"
 
 explore: daily_activity_clean {}
 
-explore: chars_clean {}
+explore: chars_clean {
+  join: one_thru_70_summary {
+    relationship: one_to_one
+    sql_on: ${chars_clean.char}=${one_thru_70_summary.char} ;;
+    sql_where: ${one_thru_70_summary.char} is not null ;;
+  }
+  fields: [ALL_FIELDS*]
+}
 
 explore: locations {}
 
 explore: zones {}
 
-explore: hourly_activity {}
+explore: hourly_activity_clean {}
 
 explore: weekly_summary_clean {}
 

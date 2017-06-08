@@ -28,7 +28,6 @@ view: weekly_summary_clean {
 
   measure: count {
     type: count
-    drill_fields: []
   }
 
 

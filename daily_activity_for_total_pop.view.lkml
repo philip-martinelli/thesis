@@ -14,12 +14,12 @@ view: daily_activity_clean {
   dimension: week_day_ordered {
     type: number
     sql: CASE WHEN daily_activity_clean.day_of_week = 'Monday' THEN 1
-  WHEN daily_activity_clean.day_of_week = 'Tuesday' THEN 2
-  WHEN daily_activity_clean.day_of_week = 'Wednesday' THEN 3
-  WHEN daily_activity_clean.day_of_week = 'Thursday' THEN 4
-  WHEN daily_activity_clean.day_of_week = 'Friday' THEN 5
-  WHEN daily_activity_clean.day_of_week = 'Saturday' THEN 6
-  ELSE 7 END ;;
+          WHEN daily_activity_clean.day_of_week = 'Tuesday' THEN 2
+          WHEN daily_activity_clean.day_of_week = 'Wednesday' THEN 3
+          WHEN daily_activity_clean.day_of_week = 'Thursday' THEN 4
+          WHEN daily_activity_clean.day_of_week = 'Friday' THEN 5
+          WHEN daily_activity_clean.day_of_week = 'Saturday' THEN 6
+          ELSE 7 END ;;
   }
 
 
@@ -42,11 +42,6 @@ view: daily_activity_clean {
     type: number
     sql: ${TABLE}.days_active;;
   }
-
-#   measure: sum_days_active {
-#     type: sum
-#     sql: ${days_active} ;;
-#   }
 
   measure: avg_minutes {
     type: average
