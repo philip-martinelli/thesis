@@ -7,7 +7,7 @@ view: chars_clean {
     primary_key: yes
   }
 
-  dimension: new_players {
+  dimension: new_player {
     type: string
     sql: CASE WHEN EXISTS (SELECT * FROM wow.new_chars b WHERE b.char = ${char}) THEN 'New' else 'Existing' END;;
   }
@@ -26,7 +26,6 @@ view: chars_clean {
   measure: count {
     label: "Count"
     type: count
-    drill_fields: []
   }
 
 

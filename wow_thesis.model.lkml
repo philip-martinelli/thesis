@@ -20,6 +20,13 @@ explore: chars_clean {
   fields: [ALL_FIELDS*]
 }
 
+explore: char_facts {
+  join: chars_clean {
+    relationship: one_to_one
+    sql_on: ${chars_clean.char} = ${char_facts.char} ;;
+  }
+}
+
 explore: locations {}
 
 explore: zones {}
@@ -31,3 +38,7 @@ explore: weekly_summary_clean {}
 explore: weekly_summary_dist {}
 
 explore: daily_activity_dist {}
+
+explore: zz_new_chars_by_month {}
+
+explore: zz_chars_leveling_funnel {}

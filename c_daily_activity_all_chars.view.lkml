@@ -53,4 +53,9 @@ view: daily_activity_clean {
     sql: ${sessions} ;;
   }
 
+  measure: sum_minutes {
+    type: sum
+    sql: ${minutes} ;;
+  }
+
 }
