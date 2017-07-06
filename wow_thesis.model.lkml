@@ -42,3 +42,5 @@ explore: daily_activity_dist {}
 explore: zz_new_chars_by_month {}
 
 explore: zz_chars_leveling_funnel {}
+
+explore: test {}
