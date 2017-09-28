@@ -27,9 +27,15 @@ derived_table: {
     sql: ${TABLE}.minutes ;;
   }
 
+  dimension: test {
+    type: number
+    sql: 1.00000000*${total_minutes} ;;
+  }
+
+
   dimension: total_sessions {
     type: number
-    sql: ${TABLE}.sessions ;;
+    sql: CAST(${TABLE}.sessions as FLOAT64);;
   }
 
   dimension: total_days_active {

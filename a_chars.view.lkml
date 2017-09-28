@@ -26,6 +26,7 @@ view: chars_clean {
   measure: count {
     label: "Count"
     type: count
+    drill_fields: []
   }
 
 

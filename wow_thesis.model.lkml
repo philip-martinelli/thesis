@@ -44,3 +44,12 @@ explore: zz_new_chars_by_month {}
 explore: zz_chars_leveling_funnel {}
 
 explore: test {}
+
+explore: chars_c {
+  view_name: chars_clean
+  fields: [ALL_FIELDS*,-char_facts.total_minutes]
+  join: char_facts {
+    sql_on: ${chars_clean.char} = ${char_facts.char} ;;
+    relationship: one_to_one
+  }
+}
