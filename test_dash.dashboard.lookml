@@ -1,4 +1,4 @@
-- dashboard: test_dash [test]
+- dashboard: test_dash
   title: Test Dash
   layout: tile
   tile_size: 100
